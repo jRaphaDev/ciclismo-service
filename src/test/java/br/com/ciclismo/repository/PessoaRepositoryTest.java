@@ -33,6 +33,7 @@ public class PessoaRepositoryTest {
 		pessoa.setCpf("XXX.XXX.XXX-XX");
 		pessoa.setEmail("email@test.com");
 		pessoa.setDisponivel(true);
+		pessoa.setSenha("Teste md5");
 	}
 
 	@Test

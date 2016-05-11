@@ -48,6 +48,14 @@ public class Pessoa implements Serializable {
 	@NotNull(message="O campo celular é necessário.")
 	private String celular;
 	
+	@NotBlank(message="O campo login é necessário.")
+	@NotNull(message="O campo login é necessário.")
+	private String login;
+	
+	@NotBlank(message="O campo senha é necessário.")
+	@NotNull(message="O campo senha é necessário.")
+	private String senha;
+	
 	private boolean disponivel;
 
 	public long getId() {
@@ -105,9 +113,21 @@ public class Pessoa implements Serializable {
 	public void setDisponivel(boolean disponivel) {
 		this.disponivel = disponivel;
 	}
-	
-	
-	
-	
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 	
 }

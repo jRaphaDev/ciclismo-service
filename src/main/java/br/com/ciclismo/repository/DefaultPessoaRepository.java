@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import br.com.ciclismo.model.Pessoa;
+import br.com.ciclismo.security.Criptografia;
 import br.com.ciclismo.util.StatusException;
 
 public class DefaultPessoaRepository implements PessoaRepository {
@@ -22,6 +23,7 @@ public class DefaultPessoaRepository implements PessoaRepository {
 	@Override
 	public Pessoa criar(Pessoa pessoa) {
 		try {
+			pessoa.setSenha(Criptografia.criptografar(pessoa.getSenha()));
 			entityManager.persist(pessoa);
 			logger.debug("Pessoa criada com sucesso.");
 			return pessoa;
