@@ -2,18 +2,21 @@ package br.com.ciclismo.repository;
 
 import java.util.List;
 
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import javax.ws.rs.core.Response.Status;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import br.com.ciclismo.model.Pessoa;
-import br.com.ciclismo.security.Criptografia;
 import br.com.ciclismo.util.StatusException;
 
+@Named
+@Transactional
 public class DefaultPessoaRepository implements PessoaRepository {
 	
 	@PersistenceContext
@@ -23,7 +26,6 @@ public class DefaultPessoaRepository implements PessoaRepository {
 	@Override
 	public Pessoa criar(Pessoa pessoa) {
 		try {
-			pessoa.setSenha(Criptografia.criptografar(pessoa.getSenha()));
 			entityManager.persist(pessoa);
 			logger.debug("Pessoa criada com sucesso.");
 			return pessoa;

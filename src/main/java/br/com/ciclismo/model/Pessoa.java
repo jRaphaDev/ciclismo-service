@@ -14,6 +14,8 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.br.CPF;
 
+import br.com.ciclismo.security.Criptografia;
+
 @Entity
 @Table(name="pessoa")
 public class Pessoa implements Serializable {
@@ -119,7 +121,7 @@ public class Pessoa implements Serializable {
 	}
 
 	public void setLogin(String login) {
-		this.login = login;
+		this.login = Criptografia.criptografar(login);
 	}
 
 	public String getSenha() {
