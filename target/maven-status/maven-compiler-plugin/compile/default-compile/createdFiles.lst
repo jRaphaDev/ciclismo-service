@@ -1,0 +1,13 @@
+br\com\ciclismo\service\ServiceUtil.class
+br\com\ciclismo\util\FailureResponseBuilder.class
+br\com\ciclismo\repository\PessoaRepository.class
+br\com\ciclismo\ApplicationCORSFilter.class
+br\com\ciclismo\model\Pessoa.class
+br\com\ciclismo\service\PessoaService.class
+br\com\ciclismo\service\DefaultPessoaService.class
+br\com\ciclismo\util\StatusException.class
+br\com\ciclismo\webapp\H2Console.class
+br\com\ciclismo\Application.class
+br\com\ciclismo\security\Criptografia.class
+br\com\ciclismo\repository\DefaultPessoaRepository.class
+br\com\ciclismo\util\FailureReason.class

@@ -1,1 +1,1 @@
-INSERT INTO pessoa(nome, sobreNome, cpf, email, login, senha) VALUES('Raphael', 'Freitas', '384.211.928-33', 'test@test.com', 'haha', 'swordfish');
+INSERT INTO pessoa(nome, sobre_nome, cpf, email, login, senha, celular, disponivel) VALUES('Raphael', 'Freitas', '384.211.928-33', 'test@test.com', 'haha', 'swordfish', '997979616', false);
